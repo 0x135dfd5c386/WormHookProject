@@ -2,25 +2,26 @@ plugins {
     id 'com.android.application'
 }
 android {
-    namespace 'com.algorithm.hook'
-    compileSdk 34
+    namespace = 'com.algorithm.hook'
+    compileSdk = 34
     defaultConfig {
-        applicationId "com.algorithm.hook"
-        minSdk 26
-        targetSdk 28
-        versionCode 1
-        versionName "1.0"
+        applicationId = 'com.algorithm.hook'
+        minSdk = 26
+        targetSdk = 28
+        versionCode = 1
+        versionName = '1.0'
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
     }
     packagingOptions {
-        exclude 'META-INF/DEPENDENCIES'
-        exclude 'META-INF/LICENSE'
+        resources {
+            excludes += ['META-INF/DEPENDENCIES', 'META-INF/LICENSE']
+        }
     }
 }
 dependencies {
-    implementation 'dev.rikka.shizuku:api:13.1.5'
-    implementation 'dev.rikka.shizuku:provider:13.1.5'
+    implementation('dev.rikka.shizuku:api:13.1.5')
+    implementation('dev.rikka.shizuku:provider:13.1.5')
 }
