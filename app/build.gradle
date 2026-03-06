@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
 }
 android {
+    namespace 'com.algorithm.hook'
     compileSdk 34
     defaultConfig {
         applicationId "com.algorithm.hook"
@@ -17,11 +18,9 @@ android {
     packagingOptions {
         exclude 'META-INF/DEPENDENCIES'
         exclude 'META-INF/LICENSE'
-        exclude 'META-INF/LICENSE.txt'
     }
 }
 dependencies {
-    // Shizuku API
     implementation 'dev.rikka.shizuku:api:13.1.5'
     implementation 'dev.rikka.shizuku:provider:13.1.5'
 }
