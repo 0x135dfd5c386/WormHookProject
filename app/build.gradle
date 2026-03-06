@@ -1,17 +1,27 @@
 plugins {
-    id 'com.android.library'
+    id 'com.android.application'
 }
 android {
     compileSdk 34
     defaultConfig {
-        minSdk 21
+        applicationId "com.algorithm.hook"
+        minSdk 26
         targetSdk 28
+        versionCode 1
+        versionName "1.0"
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+    }
 }
 dependencies {
-    compileOnly 'com.squareup.okhttp3:okhttp:4.9.3'
+    // Shizuku API
+    implementation 'dev.rikka.shizuku:api:13.1.5'
+    implementation 'dev.rikka.shizuku:provider:13.1.5'
 }
